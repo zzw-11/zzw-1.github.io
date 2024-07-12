@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative Photo Wall</title>
+    <style>
+        .marquee {
+            overflow: hidden;
+            white-space: nowrap;
+            min-height: 100%;
+        }
+
+        .marquee-content {
+            display: inline-block;
+            animation: marquee 160s linear infinite;
+        }
+
+        @keyframes marquee {
+            0% {
+                transform: translateX(100%);
+            }
+
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        .paused {
+            animation-play-state: paused;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="marquee">
+        <div class="marquee-content">
+            <img class="marquee-img" src="img/1.jpeg"  onmouseover="pauseMarquee()" onmouseout="resumeMarquee()"/>
+            <img class="marquee-img" src="img/2.jpeg"  onmouseover="pauseMarquee()" onmouseout="resumeMarquee()"/>
+            <img class="marquee-img" src="img/3.jpeg"  onmouseover="pauseMarquee()" onmouseout="resumeMarquee()"/>
+            <img class="marquee-img" src="img/4.jpeg"  onmouseover="pauseMarquee()" onmouseout="resumeMarquee()"/>
+            <img class="marquee-img" src="img/5.jpeg"  onmouseover="pauseMarquee()" onmouseout="resumeMarquee()"/>
+            <img class="marquee-img" src="img/6.jpeg"  onmouseover="pauseMarquee()" onmouseout="resumeMarquee()"/>
+            <img class="marquee-img" src="img/7.jpeg"  onmouseover="pauseMarquee()" onmouseout="resumeMarquee()"/>
+            <img class="marquee-img" src="img/8.jpeg"  onmouseover="pauseMarquee()" onmouseout="resumeMarquee()"/>
+            <img class="marquee-img" src="img/9.jpeg"  onmouseover="pauseMarquee()" onmouseout="resumeMarquee()"/>
+            <img class="marquee-img" src="img/10.jpeg"  onmouseover="pauseMarquee()" onmouseout="resumeMarquee()"/>
+            <img class="marquee-img" src="img/11.jpeg"  onmouseover="pauseMarquee()" onmouseout="resumeMarquee()"/>
+            <img class="marquee-img" src="img/12.jpeg"  onmouseover="pauseMarquee()" onmouseout="resumeMarquee()"/>
+            <img class="marquee-img" src="img/13.jpeg"  onmouseover="pauseMarquee()" onmouseout="resumeMarquee()"/>
+            <img class="marquee-img" src="img/14.jpeg"  onmouseover="pauseMarquee()" onmouseout="resumeMarquee()"/>
+            <img class="marquee-img" src="img/15.jpeg"  onmouseover="pauseMarquee()" onmouseout="resumeMarquee()"/>
+            <img class="marquee-img" src="img/16.jpeg"  onmouseover="pauseMarquee()" onmouseout="resumeMarquee()"/>
+            <img class="marquee-img" src="img/17.jpeg"  onmouseover="pauseMarquee()" onmouseout="resumeMarquee()"/>
+            <img class="marquee-img" src="img/18.jpeg"  onmouseover="pauseMarquee()" onmouseout="resumeMarquee()"/>
+            <img class="marquee-img" src="img/19.jpeg"  onmouseover="pauseMarquee()" onmouseout="resumeMarquee()"/>
+            <img class="marquee-img" src="img/20.jpeg"  onmouseover="pauseMarquee()" onmouseout="resumeMarquee()"/>
+            <img class="marquee-img" src="img/21.jpeg"  onmouseover="pauseMarquee()" onmouseout="resumeMarquee()"/>
+            <img class="marquee-img" src="img/22.jpeg" onmouseover="pauseMarquee()" onmouseout="resumeMarquee()" />
+            <img class="marquee-img" src="img/23.jpeg" onmouseover="pauseMarquee()" onmouseout="resumeMarquee()" />
+            <img class="marquee-img" src="img/24.jpeg"  onmouseover="pauseMarquee()" onmouseout="resumeMarquee()"/>
+            <!-- 更多图片可以复制<img>标签 -->
+        </div>
+    </div>
+    <script type="text/javascript">
+        function pauseMarquee() {
+            // 查找并添加暂停类
+            var marqueeContent = document.querySelector('.marquee-content');
+            marqueeContent.classList.add('paused');
+        }
+
+        function resumeMarquee() {
+            // 移除暂停类以恢复动画
+            var marqueeContent = document.querySelector('.marquee-content');
+            marqueeContent.classList.remove('paused');
+        }
+    </script>
+
+
+
+</body>
+
+
+</html>
